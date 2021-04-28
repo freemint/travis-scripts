@@ -546,8 +546,10 @@ create_filesystem() {
 	# can't go to copy_guides because that is called for all builds
 	local GUIDESDIR="$1"
 	mkdir -p "$GUIDESDIR"
+	mkdir -p "$GUIDESDIR/de"
 	cp "$QED_DIR/doc"/qed.{hyp,ref} "$GUIDESDIR"
-	cp "$TOSWIN2_DIR/doc"/toswin2.{hyp,ref} "$GUIDESDIR"
+	cp "$TOSWIN2_DIR/doc"/toswin2.{hyp,ref} "$GUIDESDIR/de"
+	cp "$TOSWIN2_DIR/doc/en"/toswin2.{hyp,ref} "$GUIDESDIR"
 
 	cp "$DOSFSTOOLS_DIR/sbin/fsck.fat" "$SYSROOT/bin"
 	cp "$DOSFSTOOLS_DIR/sbin/fatlabel" "$SYSROOT/bin"
