@@ -547,9 +547,11 @@ create_filesystem() {
 	local GUIDESDIR="$1"
 	mkdir -p "$GUIDESDIR"
 	mkdir -p "$GUIDESDIR/de"
+	mkdir -p "$GUIDESDIR/fr"
 	cp "$QED_DIR/doc"/qed.{hyp,ref} "$GUIDESDIR"
 	cp "$TOSWIN2_DIR/doc"/toswin2.{hyp,ref} "$GUIDESDIR/de"
 	cp "$TOSWIN2_DIR/doc/en"/toswin2.{hyp,ref} "$GUIDESDIR"
+	cp "$TOSWIN2_DIR/doc/fr"/toswin2.{hyp,ref} "$GUIDESDIR/fr"
 
 	cp "$DOSFSTOOLS_DIR/sbin/fsck.fat" "$SYSROOT/bin"
 	cp "$DOSFSTOOLS_DIR/sbin/fatlabel" "$SYSROOT/bin"
